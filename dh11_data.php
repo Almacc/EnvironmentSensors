@@ -1,20 +1,18 @@
 <?php
-header("Access-Control-Allow-Origin:  *");
-header("Access-Control-Allow-Origin:  *");
+ $temperature = $_GET["temp"];
+ $humidity = $_GET["hum"];
 
-$connect = mysqli_connect("localhost:4306", "root", "", "sensor_dh11");
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
-}
+echo "Temperature is: ".$temperature." <br>Humidity is: ".$humidity;
 
-$sql = "SELECT * FROM mq5 ORDER BY id DESC";
-$result = mysqli_query($connect, $sql);
-$json_array = array();
-while ($row = mysqli_fetch_assoc($result)) {
-    $json_array[] = $row;
-}
-echo json_encode($json_array);
 
-mysqli_close($connect);
+$server = "localhost:4306";
+$username = "root";
+$password = "";
+$database = "sensor_dh11";
+
+$conn = mysqli_connect($server, $username, $password, $database) or die ("Not able to connect!");
+
+$getinfo = "INSERT INTO dh11 (temperature, humidity) VALUES (".$temperature.", ".$humidity.")";
+
+$result = mysqli_query($conn, $getinfo );
 ?>
