@@ -1,0 +1,67 @@
+.container {
+    max-width: 1200px;
+ 
+    margin: 0 auto; /* Center the container */
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #020101; /* Add border to table */
+    padding: 10px; /* Add padding to the table */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+h1.text-uppercase {
+    font-family: 'YourDesiredFont', sans-serif; /* Replace 'YourDesiredFont' with the name of your desired font */
+    /* Other styles for the heading */
+}
+.fontContent {
+    color: rgb(10, 4, 4);
+}
+
+.labelColor {
+    color: white !important;;
+}
+.custom-table th,
+.custom-table td {
+    padding: 8px; /* Add padding to table cells */
+    border: 1px solid #ddd; /* Add border to table cells */
+    color: rgb(10, 6, 6);
+}
+
+.custom-thead {
+    background-color: #194049; /* Add background color to table header */
+    font-weight: bold; /* Make table header bold */
+}
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+}
+
+.filter-controls label {
+    margin-right: 10px;
+}
+
+.filter-button {
+    padding: 8px 16px; /* Add padding to the filter button */
+    background-color: #194049; /* Background color for the filter button */
+    color: #fff; /* Text color for the filter button */
+    border: none; /* Remove border from the filter button */
+    border-radius: 4px; /* Add border radius to the filter button */
+    cursor: pointer; /* Add pointer cursor to the filter button */
+    margin-left: 10px; /* Add margin to the left of the filter button */
+}
+
+.filter-button:hover {
+    background-color: #194049; /* Hover background color for the filter button */
+}
+
+
+.table-container {
+    height: 600px; /* Set the desired height for the scrollable area */
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+}
