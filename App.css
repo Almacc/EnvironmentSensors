@@ -1,0 +1,108 @@
+.App {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-container {
+  display: flex;
+  height: 100%;
+}
+
+.Sidebar {
+  height: 100%;
+  width: 300px;
+  background-color: #44696e;
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.SidebarList .row {
+  width: 100%;
+  height: 60px;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: #194049;
+}
+
+#active {
+  background-color: #194049;
+}
+
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.row #title {
+  flex: 70%;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.home-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.home-page h1 {
+  font-size: 2em;
+}
+
+.home-page h2 {
+  font-size: 1.5em;
+}
+
+.info-box-container {
+  display: flex;
+}
+
+.info-box {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom right, #44696e, #194049);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.info-box:last-child {
+  margin-right: 0;
+}
+
+.info-box h3 {
+  margin-top: 0;
+}
